@@ -9,13 +9,33 @@
 */
 
 
+.navbar__menu a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+a.active {
+    background: rgb(7, 161, 149);
+    color: white;
+}
+
+.navbar__menu 
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.75em;
+}
+
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
-    color:#fff;
+    color: #fff;
 }
 
 
@@ -192,18 +212,18 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+/* Note: active class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
